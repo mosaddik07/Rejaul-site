@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Marry Me?</title>
+    <link rel="icon" href="logo.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <video autoplay muted loop class="video-background">
+      <source src="Black Video.mp4" type="video/mp4" />
+    </video>
+    <div class="content">
+      <h1 id="question">Will You Marry Me?</h1>
+      <div class="buttons">
+        <button id="noThanks"><p>NoThanks</p></button>
+        <button id="yesOfCourse"><p>Yeah! Of Course😍</p></button>
+      </div>
+      <p id="response"></p>
+    </div>
+    <script>
+      document.getElementById("noThanks").addEventListener("click", function () {
+        document.getElementById("question").style.display = "none";
+        document.querySelector(".buttons").style.display = "none";
+        document.getElementById("response").innerText = "Opps! May Be Wrong Number🫡";
+        document.getElementById("response").style.display = "block";
+      });
+
+      document.getElementById("yesOfCourse").addEventListener("click", function () {
+        alert("🙈");
+        document.getElementById("question").style.display = "none";
+        document.querySelector(".buttons").style.display = "none";
+        document.getElementById("response").innerText = "Meghla I Love You🤍";
+        document.getElementById("response").style.display = "block";
+      });
+    </script>
+  </body>
+</html>
